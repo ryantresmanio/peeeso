@@ -1,38 +1,40 @@
-.App {
-  text-align: center;
+.nav-effects {
+    position: relative;
+    text-decoration: none;
+    transition: color 0.3s ease-in-out;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.nav-effects:hover {
+    color: #0835CA;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+.nav-effects::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -2px;
+    width: 0;
+    height: 2px;
+    background-color: #0835CA;
+    transition: width 0.3s ease-in-out;
+}
+
+.nav-effects:hover::after {
+    width: 100%;
+}
+
+.text-shadow-yellow {
+    text-shadow: -4px 0px 4px #FFB42C;
+}
+
+.line-dashed{
+    border-top: 1px dashed #0835CA;
+}
+
+.background-svg {
+    background-image: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxNDQwIDMyMCI+PHBhdGggZmlsbD0iIzAwOTlmZiIgZmlsbC1vcGFjaXR5PSIxIiBkPSJNMCwyODhMMzQuMywyNjEuM0M2OC42LDIzNSwxMzcsMTgxLDIwNiwxNzAuN0M3NC4zLDE2MCwzNDMsMTkyLDE0MSwxNzAuN0M0ODAsMTQ5LDU0OSw3NSw2MTdDNjU4LjcsNTMsMTI2LDEyOCwxMzcxLDIyNCwxMzcsMjcyTDE0NDAwMiwzMjBMMTQ0MCwwTDE0MDUsMDAwQzE0MDEuNCwwLDEwOSwwQzExNiwxMiwxMTYsMjIsMTIzNiw5MC43QzEzMDIuOSwxMjgsMTM3MSwyMjQsMTQwNiwxMjgsMjcwTDE0NDAwMCwzMjBMMTAwMiwwLjA3MDEwMiwyLDQyNjYyPjwvcGF0aD4gPC9zdmc+');
+    background-size: cover;
+    background-position: center;
+    height: 100vh; 
   }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
+  
