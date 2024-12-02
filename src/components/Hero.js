@@ -1,4 +1,6 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 import heroImage from '../assets/jobfair3.jpg';
 import heroImage1 from '../assets/jobfair1.jpg';
 import heroImage2 from '../assets/jobfair.jpg';
@@ -6,8 +8,15 @@ import heroImage3 from '../assets/jobfair2.jpg';
 import Banner from '../assets/try.jpg';
 
 const Hero = () => {
+    useEffect(() => {
+        AOS.init({
+            duration: 1000, // Animation duration in milliseconds
+            once: true, // Animation happens only once
+        });
+    }, []);
+
     return (
-        <div className="text-center py-36 bg-cover bg-center bg-no-repeat"style={{ backgroundImage: `url(${Banner})` }}>
+        <div className="text-center py-36 bg-cover bg-center bg-no-repeat" style={{ backgroundImage: `url(${Banner})` }}>
             <div className="py-12 px-8 mx-auto rounded-lg max-w-4xl">
                 <h1 className="text-6xl text-orange font-extrabold">
                     Ready to Take the Next Step?
@@ -21,13 +30,33 @@ const Hero = () => {
             </div>
 
             <div className="grid grid-cols-2 sm:grid-cols-4 gap-8 lg:px-32 px-8 pt-20">
-                <img src={heroImage} alt="Hero" className="w-full h-full object-cover rounded-md shadow-md transition-transform duration-300 hover:scale-110"
+                <img
+                    src={heroImage}
+                    alt="Hero 1"
+                    data-aos="fade-right"
+                    data-aos-delay="0" // No delay for the first image
+                    className="w-full h-full object-cover rounded-md shadow-md transition-transform duration-300 hover:scale-110"
                 />
-                <img src={heroImage1} alt="Hero" className="w-full h-full object-cover rounded-md shadow-md transition-transform duration-300 hover:scale-110"
+                <img
+                    src={heroImage1}
+                    alt="Hero 2"
+                    data-aos="fade-right"
+                    data-aos-delay="200" // Delay of 200ms
+                    className="w-full h-full object-cover rounded-md shadow-md transition-transform duration-300 hover:scale-110"
                 />
-                <img src={heroImage2} alt="Hero" className="w-full h-full object-cover rounded-md shadow-md transition-transform duration-300 hover:scale-110"
+                <img
+                    src={heroImage2}
+                    alt="Hero 3"
+                    data-aos="fade-right"
+                    data-aos-delay="400" // Delay of 400ms
+                    className="w-full h-full object-cover rounded-md shadow-md transition-transform duration-300 hover:scale-110"
                 />
-                <img src={heroImage3} alt="Hero" className="w-full h-full object-cover rounded-md shadow-md transition-transform duration-300 hover:scale-110"
+                <img
+                    src={heroImage3}
+                    alt="Hero 4"
+                    data-aos="fade-right"
+                    data-aos-delay="600" // Delay of 600ms
+                    className="w-full h-full object-cover rounded-md shadow-md transition-transform duration-300 hover:scale-110"
                 />
             </div>
         </div>
