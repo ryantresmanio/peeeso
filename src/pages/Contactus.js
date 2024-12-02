@@ -24,16 +24,16 @@ const Contactus = () => {
                 <div className="shadow-md rounded-md w-full h-full p-10 flex flex-col justify-center items-center text-center">
                     <FaLocationDot className="text-green text-5xl mb-2" />
                     <h4 className="text-xl p-2 font-bold text-darkblue">PESO South</h4>
-                    <p className="text-sm">
+                    <a className="text-sm text-blue underline hover:text-darkblue" href="https://maps.app.goo.gl/nXWY6xv4tTmZoeN78" target="_blank">
                         8th Ave, Grace Park East, Caloocan, Metro Manila
-                    </p>
+                    </a>
                 </div>
                 <div className="shadow-md rounded-md w-full h-full p-10 flex flex-col justify-center items-center text-center">
                     <FaLocationDot className="text-green text-5xl mb-2" />
                     <h4 className="text-xl p-2 font-bold text-darkblue">PESO North</h4>
-                    <p className="text-sm">
+                    <a className="text-sm text-blue underline hover:text-darkblue" href="https://maps.app.goo.gl/QKC7B8i4wWcqKUR29" target="_blank">
                         887-1519 Zapote Rd, Caloocan, 1400 Metro Manila
-                    </p>
+                    </a>
                 </div>
                 <div className="shadow-md rounded-md w-full h-full p-10 flex flex-col justify-center items-center text-center">
                     <IoCall className="text-green text-5xl mb-2" />

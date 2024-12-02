@@ -30,34 +30,43 @@ const Hero = () => {
             </div>
 
             <div className="grid grid-cols-2 sm:grid-cols-4 gap-8 lg:px-32 px-8 pt-20">
-                <img
-                    src={heroImage}
-                    alt="Hero 1"
-                    data-aos="fade-right"
-                    data-aos-delay="0" // No delay for the first image
-                    className="w-full h-full object-cover rounded-md shadow-md transition-transform duration-300 hover:scale-110"
-                />
-                <img
-                    src={heroImage1}
-                    alt="Hero 2"
-                    data-aos="fade-right"
-                    data-aos-delay="200" // Delay of 200ms
-                    className="w-full h-full object-cover rounded-md shadow-md transition-transform duration-300 hover:scale-110"
-                />
-                <img
-                    src={heroImage2}
-                    alt="Hero 3"
-                    data-aos="fade-right"
-                    data-aos-delay="400" // Delay of 400ms
-                    className="w-full h-full object-cover rounded-md shadow-md transition-transform duration-300 hover:scale-110"
-                />
-                <img
-                    src={heroImage3}
-                    alt="Hero 4"
-                    data-aos="fade-right"
-                    data-aos-delay="600" // Delay of 600ms
-                    className="w-full h-full object-cover rounded-md shadow-md transition-transform duration-300 hover:scale-110"
-                />
+
+                <div className="image-container" style={{ transition: 'transform 0.3s ease' }} onMouseOver={(e) => (e.currentTarget.style.transform = 'scale(1.1)')} onMouseOut={(e) => (e.currentTarget.style.transform = 'scale(1)')}>
+                    <img
+                        src={heroImage}
+                        alt="Hero 1"
+                        data-aos="fade-right"
+                        data-aos-delay="0"
+                        className="w-full h-full object-cover rounded-md shadow-md"
+                    />
+                </div>
+                <div dclassName="image-container" style={{ transition: 'transform 0.3s ease' }} onMouseOver={(e) => (e.currentTarget.style.transform = 'scale(1.1)')} onMouseOut={(e) => (e.currentTarget.style.transform = 'scale(1)')}>
+                    <img
+                        src={heroImage1}
+                        alt="Hero 2"
+                        data-aos="fade-right"
+                        data-aos-delay="200"
+                        className="w-full h-full object-cover rounded-md shadow-md"
+                    />
+                </div>
+                <div className="image-container" style={{ transition: 'transform 0.3s ease' }} onMouseOver={(e) => (e.currentTarget.style.transform = 'scale(1.1)')} onMouseOut={(e) => (e.currentTarget.style.transform = 'scale(1)')}>
+                    <img
+                        src={heroImage2}
+                        alt="Hero 3"
+                        data-aos="fade-right"
+                        data-aos-delay="400"
+                        className="w-full h-full object-cover rounded-md shadow-md"
+                    />
+                </div>
+                <div className="image-container" style={{ transition: 'transform 0.3s ease' }} onMouseOver={(e) => (e.currentTarget.style.transform = 'scale(1.1)')} onMouseOut={(e) => (e.currentTarget.style.transform = 'scale(1)')}>
+                    <img
+                        src={heroImage3}
+                        alt="Hero 4"
+                        data-aos="fade-right"
+                        data-aos-delay="600"
+                        className="w-full h-full object-cover rounded-md shadow-md"
+                    />
+                </div>
             </div>
         </div>
     );
