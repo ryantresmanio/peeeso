@@ -37,14 +37,14 @@ const Navbar = () => {
         try {
             await signOut(auth); 
             toast.success("Logged out successfully!", { 
-                position: "bottom-right",
+                position: "top-center",
                 autoClose: 1000,
             });
             navigate("/"); 
         } catch (error) {
             console.error("Error during sign out:", error);
             toast.error("Error logging out. Please try again.", {
-                position: "bottom-right",
+                position: "top-center",
                 autoClose: 1000,
             });
         }

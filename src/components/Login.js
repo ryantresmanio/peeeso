@@ -24,14 +24,14 @@ function Login() {
         try {
             await signInWithEmailAndPassword(auth, email, password);
             toast.success("Signed in successfully!", {
-                position: "bottom-right",
+                position: "top-center",
                 autoClose: 1000,
             });
             navigate("/");
         } catch (error) {
             console.error("Error signing in with email and password", error);
             toast.error(`Error signing in: ${error.message}`, {
-                position: "bottom-right",
+                position: "top-center",
                 autoClose: 1000,
             });
         } finally {
@@ -48,14 +48,14 @@ function Login() {
             const result = await signInWithPopup(auth, provider);
             console.log("User signed in with Google:", result.user);
             toast.success("Signed in successfully with Google!", {
-                position: "top-right",
+                position: "top-center",
                 autoClose: 3000,
             });
             navigate("/");
         } catch (error) {
             console.error("Error signing in with Google", error);
             toast.error(`Error signing in with Google: ${error.message}`, {
-                position: "top-right",
+                position: "top-center",
                 autoClose: 3000,
             });
         } finally {
