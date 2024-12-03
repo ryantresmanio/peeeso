@@ -13,36 +13,34 @@ const Navbar = () => {
     const [isDrawerOpen, setIsDrawerOpen] = useState(false);
     const [isLoginDropdownOpen, setIsLoginDropdownOpen] = useState(false);
     const [isScrolled, setIsScrolled] = useState(false);
-    const [user, setUser] = useState(null); // State for storing user info
-    const navigate = useNavigate(); // Used to navigate after logout
+    const [user, setUser] = useState(null); 
+    const navigate = useNavigate();
 
     useEffect(() => {
-        // Scroll event to change navbar style
         const handleScroll = () => {
             setIsScrolled(window.scrollY > 10);
         };
         window.addEventListener("scroll", handleScroll);
-
-        // Check for auth state change
+       
         const unsubscribe = onAuthStateChanged(auth, (currentUser) => {
-            setUser(currentUser); // Set the user info
+            setUser(currentUser);
         });
 
         return () => {
             window.removeEventListener("scroll", handleScroll);
-            unsubscribe(); // Clean up the listener
+            unsubscribe(); 
         };
     }, []);
 
     // Handle the logout process
     const handleLogout = async () => {
         try {
-            await signOut(auth); // Sign out the user
-            toast.success("Logged out successfully!", { // Show success toast
+            await signOut(auth); 
+            toast.success("Logged out successfully!", { 
                 position: "bottom-right",
                 autoClose: 1000,
             });
-            navigate("/"); // Redirect to home or login page
+            navigate("/"); 
         } catch (error) {
             console.error("Error during sign out:", error);
             toast.error("Error logging out. Please try again.", {
@@ -54,7 +52,6 @@ const Navbar = () => {
 
     return (
         <div>
-            {/* Toast container to render toast notifications */}
             <ToastContainer />
 
             <header
@@ -87,7 +84,7 @@ const Navbar = () => {
                 {/* Login/Profile Dropdown */}
                 <div className="relative hidden lg:block">
                     {user ? (
-                        <button className="flex items-center space-x-2 text-black hover:text-darkblue" onClick={() => setIsLoginDropdownOpen(!isLoginDropdownOpen)}>
+                        <button className="flex items-center text-black hover:text-darkblue min-w-max" onClick={() => setIsLoginDropdownOpen(!isLoginDropdownOpen)}>
                             {user ? (
                                 <img
                                     src={user.photoURL || "https://via.placeholder.com/150"}
@@ -97,7 +94,7 @@ const Navbar = () => {
                             ) : (
                                 <span>Loading...</span>
                             )}
-                            <span className="text-base w-full text-ellipsis whitespace-nowrap pl-1 overflow-hidden">{user.displayName || "Profile"}</span>
+                             <span className="text-base pl-2">{user.displayName || "Profile"}</span>
                             <RiArrowDropDownLine className={`text-4xl transform transition-transform duration-300 ${isLoginDropdownOpen ? "rotate-180" : ""}`}
                             />
                         </button>
@@ -139,16 +136,16 @@ const Navbar = () => {
                         <RiCloseLine />
                     </button>
                 </div>
-                <nav className="flex flex-col p-5 h-full space-y-4">
-                    <Link to="/" className="text-black nav-effects">Home</Link>
-                    <Link to="/about-us" className="text-black nav-effects">About us</Link>
-                    <Link to="/announcement" className="text-black nav-effects">Announcement</Link>
-                    <Link to="/job-listing" className="text-black nav-effects">Job listing</Link>
-                    <Link to="/contact-us" className="text-black nav-effects">Contact us</Link>
+                <nav className="flex flex-col p-8  h-full space-y-6 text-center">
+                    <Link to="/" className="text-black nav-effects  border-b border-gray-300">Home</Link>
+                    <Link to="/about-us" className="text-black nav-effects  border-b border-gray-300">About us</Link>
+                    <Link to="/announcement" className="text-black nav-effects  border-b border-gray-300">Announcement</Link>
+                    <Link to="/job-listing" className="text-black nav-effects  border-b border-gray-300">Job listing</Link>
+                    <Link to="/contact-us" className="text-black nav-effects  border-b border-gray-300">Contact us</Link>
                     {/* Login/Profile Dropdown Inside Drawer */}
                     <div>
                         {user ? (
-                             <button className="flex items-center space-x-2 text-black hover:text-darkblue " onClick={() => setIsLoginDropdownOpen(!isLoginDropdownOpen)}>
+                             <button className="flex items-center space-x-2 text-black hover:text-darkblue min-w-max" onClick={() => setIsLoginDropdownOpen(!isLoginDropdownOpen)}>
                              {user ? (
                                  <img
                                      src={user.photoURL || "https://via.placeholder.com/150"}
@@ -158,7 +155,7 @@ const Navbar = () => {
                              ) : (
                                  <span>Loading...</span>
                              )}
-                             <span className="text-base w-full text-ellipsis whitespace-nowrap overflow-hidden ">{user.displayName || "Profile"}</span>
+                             <span className="text-base pl-2">{user.displayName || "Profile"}</span>
                              <RiArrowDropDownLine className={`text-4xl transform transition-transform duration-300 ${isLoginDropdownOpen ? "rotate-180" : ""}`}
                              />
                          </button>
