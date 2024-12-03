@@ -45,7 +45,6 @@ function Login() {
         setLoading(true);
         try {
             const provider = new GoogleAuthProvider();
-            provider.setCustomParameters({ prompt: 'select_account' });
             const result = await signInWithPopup(auth, provider);
             console.log("User signed in with Google:", result.user);
             toast.success("Signed in successfully with Google!", {
