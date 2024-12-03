@@ -4,10 +4,10 @@ import pesoLogo from "../assets/peso-logo.png";
 import { CgProfile } from "react-icons/cg";
 import { RiMenu3Line, RiCloseLine, RiArrowDropDownLine } from "react-icons/ri";
 import { FaUserEdit } from "react-icons/fa";
-import { auth } from "../firebase"; // Import Firebase auth
+import { auth } from "../firebase"; 
 import { onAuthStateChanged, signOut } from "firebase/auth";
-import { toast, ToastContainer } from 'react-toastify'; // Correctly import toast and ToastContainer
-import 'react-toastify/dist/ReactToastify.css'; // Import the CSS for toast
+import { toast, ToastContainer } from 'react-toastify'; 
+import 'react-toastify/dist/ReactToastify.css'; 
 
 const Navbar = () => {
     const [isDrawerOpen, setIsDrawerOpen] = useState(false);
