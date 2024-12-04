@@ -37,7 +37,7 @@ const Joblist = () => {
     <div>
       <div className="text-center py-28 bg-cover bg-center bg-no-repeat" style={{ backgroundImage: `url(${joblistBanner})` }}>
         <div className="mx-auto max-w-4xl py-12 mt-20 px-6 rounded-lg bg-white/70 backdrop-blur-md">
-          <h1 className="text-darkblue font-bold text-2xl sm:text-3xl md:text-4xl">Available Job for You</h1>
+          <h1 className="text-darkblue font-extrabold text-2xl sm:text-3xl md:text-4xl">Available Job for You</h1>
           <p className="text-gray-600 text-base sm:text-lg pt-2">
             Browse our available positions and find the perfect job to match your skills and interests.
           </p>
