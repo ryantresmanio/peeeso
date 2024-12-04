@@ -13,8 +13,8 @@ const Contactus = () => {
     };
 
     return (
-        <div className='pt-32 lg:px-32 px-8'>
-            <div className="relative -mx-8 lg:-mx-32 -mt-10 mb-10">
+        <div className='pt-32 lg:px-48 px-8'>
+            <div className="relative -mx-8 lg:-mx-48 -mt-10 mb-10">
                 <img src={Banner} alt="banner" />
             </div>
 
@@ -62,7 +62,7 @@ const Contactus = () => {
 
             <div className='grid grid-cols-1 md:grid-cols-2 gap-36 mb-10'>
                 <div className=''>
-                    <h2 className="text-orange text-2xl font-bold mb-4">Frequently Asked Questions</h2>
+                    <h2 className="text-orange text-2xl mx-4 font-bold mb-4">Frequently Asked Questions</h2>
                     <ul className="space-y-4 m-4 my-8">
                         <li>
                             <button onClick={() => toggleAccordion(0)} className="flex items-center text-left justify-between w-full text-lg focus:outline-none"> May dagdag sahod ba agad? <MdKeyboardArrowDown className={`transform text-2xl transition-transform duration-300 ${openIndex === 0 ? 'rotate-180' : ''}`} />

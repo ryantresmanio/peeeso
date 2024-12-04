@@ -62,7 +62,7 @@ const Navbar = () => {
             >
                 <img className="w-16 h-16 rounded-full" src={pesoLogo} alt="logo" />
 
-                <h1 className="font-bold pl-2">Public Employment Service Office</h1>
+                <h1 className="font-bold text-xl pl-2">PESO</h1>
 
                 {/* Hamburger Menu Button for mobile */}
                 <button

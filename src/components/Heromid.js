@@ -3,7 +3,7 @@ import pesoJob from '../assets/peso-jobs.png';
 
 const Heromid = () => {
     return (
-        <div className="py-32 lg:px-32 px-8 grid grid-cols-1 md:grid-cols-2 gap-10 bg-gray-200">
+        <div className="py-32 lg:px-48 px-8 grid grid-cols-1 md:grid-cols-2 gap-10 bg-gray-100">
             {/* Left Side Text */}
             <div className="flex flex-col">
                 <h1 className="text-4xl font-bold py-2">

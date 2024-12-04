@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import heroImage from '../assets/jobfair3.jpg';
@@ -10,8 +11,8 @@ import Banner from '../assets/try.jpg';
 const Hero = () => {
     useEffect(() => {
         AOS.init({
-            duration: 1000, // Animation duration in milliseconds
-            once: true, // Animation happens only once
+            duration: 1000,
+            once: true,
         });
     }, []);
 
@@ -24,12 +25,14 @@ const Hero = () => {
                 <p className="p-8 text-xl text-blue">
                     Your dream job is waiting for you - let’s make it happen!
                 </p>
-                <button className="bg-blue text-white text-lg px-6 py-2 rounded-lg shadow-md hover:bg-darkblue hover:scale-105 hover:shadow-lg transition-all duration-300 ease-in-out">
-                    Log in →
-                </button>
+                <Link to="/login">
+                    <button className="bg-blue text-white text-lg px-6 py-2 rounded-lg shadow-md hover:bg-darkblue hover:scale-105 hover:shadow-lg transition-all duration-300 ease-in-out">
+                        Log in →
+                    </button>
+                </Link>
             </div>
 
-            <div className="grid grid-cols-2 sm:grid-cols-4 gap-8 lg:px-32 px-8 pt-20">
+            <div className="grid grid-cols-2 sm:grid-cols-4 gap-8 lg:px-48 px-8 pt-20">
 
                 <div className="image-container" style={{ transition: 'transform 0.3s ease' }} onMouseOver={(e) => (e.currentTarget.style.transform = 'scale(1.1)')} onMouseOut={(e) => (e.currentTarget.style.transform = 'scale(1)')}>
                     <img
