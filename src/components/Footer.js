@@ -4,17 +4,16 @@ import { Link } from "react-router-dom";
 const Footer = () => {
   return (
     <footer className="bg-gray-100 py-10">
-      <div className="container mx-auto px-6 lg:px-20">
+      <div className="mx-auto px-6 lg:px-48">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
-          {/* Logo and Description */}
           <div>
-            <h2 className="text-green text-xl font-bold">TeamIna</h2>
+            <h2 className="text-green text-xl font-bold">PESO Manpower Inc</h2>
             <p className="text-gray-600 mt-4">
               Developing a Responsive Website for Public Employment Service Office.
             </p>
           </div>
 
-          {/* Links */}
+        
           <div>
             <h3 className="text-gray-800 font-semibold">Links</h3>
             <ul className="text-gray-600 mt-4 space-y-2">
@@ -83,7 +82,7 @@ const Footer = () => {
           </div>
         </div>
         <div className="mt-10 text-center text-gray-600 text-sm">
-          Copyright © 2024 All Rights Reserved by TeamIna
+          Copyright © 2024 All Rights Reserved by PESO Manpower Inc
         </div>
       </div>
     </footer>
