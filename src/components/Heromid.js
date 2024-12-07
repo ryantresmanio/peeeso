@@ -15,7 +15,7 @@ const Heromid = () => {
                 <h2 className="text-3xl font-extrabold p-4 text-gray-700">
                     PUBLIC EMPLOYMENT SERVICE OFFICE
                 </h2>
-                <p className="text-xl px-4 text-left leading-10">
+                <p className="text-xl px-4 text-left leading-10 pb-20">
                     The Public Employment Service Office (PESO) is a non-fee charging multi-employment service facility or entity established or accredited pursuant to Republic Act No. 8759, otherwise known as the PESO Act of 1999.
                     The PESO's are community-based and maintained largely by local government units (LGU's) and a number of non-governmental organizations (NGO's) or community-based organizations (CBO's) and state universities and colleges (SUC's).
                 </p>
@@ -39,7 +39,7 @@ const Heromid = () => {
             </div>
 
             {/* Right Side Image */}
-            <div className="flex justify-center items-center">
+            <div className="flex justify-center items-start pt-28">
                 <img src={pesoJob}alt="Peso Jobs"/>
             </div>
         </div>

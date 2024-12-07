@@ -9,6 +9,7 @@ import AboutUs from "./pages/Aboutus";
 import Joblist from "./pages/Joblist";
 import Login from "./components/Login";
 import ScrollToTop from "./components/ScrollToTop";
+import Announcement from "./pages/Announcement";
 
 
 function App() {
@@ -29,11 +30,11 @@ function AppContent() {
             <Routes>
                 <Route path="/" element={<Home />} />
                 <Route path="/about-us" element={<AboutUs />} />
-                {/* <Route path="/announcement" element={<Joblist />} /> */}
+                <Route path="/announcement" element={<Announcement />} /> {/* Fixed Route */}
                 <Route path="/job-listing" element={<Joblist />} />
                 <Route path="/contact-us" element={<Contactus />} />
                 <Route path="/login" element={<Login />} />
-            </Routes>
+                </Routes>
             {location.pathname !== "/login" && <Footer />}
         </>
     );
